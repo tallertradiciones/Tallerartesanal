@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestra Historia</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4efe6;
+    color: #333;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    background: #f4efe6;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+nav a {
+    color: #2f6f4f;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #8b7d6b;
+}
+
+/* HEADER CON IMAGEN MEXICANA */
+header {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('https://lugares.inah.gob.mx/sites/default/files/styles/max_1300x1300/public/zonas/Atzompa_Foto_Mauricio_Marat_INAH.jpg?itok=yV5RosPr');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* TEXTO */
+header h1 {
+    font-size: 3em;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* LINEA */
+.linea {
+    width: 60px;
+    height: 3px;
+    background: #ffffff;
+    margin: 20px auto;
+}
+/* CONTENIDO */
+.contenedor {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* BLOQUES */
+.bloque {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.bloque:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* IMÁGENES */
+.bloque img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* TEXTO */
+.texto {
+    flex: 1;
+}
+
+.texto h2 {
+    color: #2f6f4f;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    text-align: justify;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* LINEA */
+.linea {
+    width: 60px;
+    height: 3px;
+    background: #2f6f4f;
+    margin: 20px auto;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .bloque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bloque:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .bloque img {
+        width: 100%;
+        height: 250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="Tradiciones.html">Inicio</a>
+    <a href="Historia tradiciones.html">Historía</a>
+    <a href="Taller.html">Taller</a>
+    <a href="Galería.html">Galería</a>
+    <a href="#">Contacto</a>
+</nav>
+
+<header>
+    <div>
+        <h1>Nuestra Historia</h1>
+        <div class="linea"></div>
+    </div>
+</header>
+
+<section class="contenedor">
+
+    <div class="bloque">
+        <img src="https://www.inah.gob.mx/images/boletines/2023/619/foto_home.jpg" alt="Artesanía de barro">
+        <div class="texto">
+            <h2>Origen</h2>
+            <p>
+                Nuestra historia comienza en una pequeña comunidad donde el barro no solo es un material, 
+                sino una forma de vida. Desde tiempos ancestrales, las manos de nuestros antepasados han 
+                dado forma a piezas que reflejan identidad, tradición y cultura.
+            </p>
+            <p>
+                Lo que inició como una actividad familiar, poco a poco se convirtió en un taller reconocido 
+                por la calidad y autenticidad de sus creaciones. Cada generación ha aportado nuevas ideas 
+                sin perder la esencia original.
+            </p>
+        </div>
+    </div>
+
+    <div class="bloque">
+        <img src="https://www.oaxaca-mio.com/tours/imagenesoax/atzompa/14.jpg" alt="Taller de barro">
+        <div class="texto">
+            <h2>El Taller</h2>
+            <p>
+                Nuestro taller es el corazón de todo lo que hacemos. Aquí, el barro es cuidadosamente 
+                seleccionado y preparado antes de ser moldeado a mano por artesanos expertos.
+            </p>
+            <p>
+                El proceso incluye el modelado, el secado natural y la cocción en hornos tradicionales, 
+                donde cada pieza adquiere su resistencia y carácter único. Ninguna pieza es igual a otra, 
+                lo que garantiza autenticidad en cada creación.
+            </p>
+            <p>
+                Además, combinamos técnicas tradicionales con detalles contemporáneos para adaptarnos a 
+                nuevos estilos sin perder nuestras raíces.
+            </p>
+        </div>
+    </div>
+
+    <div class="bloque">
+        <img src="https://revistaquixe.com/wp-content/uploads/2022/08/DSC04549-2.jpg" alt="Trabajo artesanal">
+        <div class="texto">
+            <h2>Nuestra Filosofía</h2>
+            <p>
+                Creemos profundamente en el valor de lo hecho a mano. Cada pieza cuenta una historia, 
+                transmite emociones y representa horas de dedicación.
+            </p>
+            <p>
+                Nuestro objetivo no es solo crear objetos decorativos, sino preservar una tradición que 
+                forma parte de nuestra identidad cultural. Apostamos por la calidad, la autenticidad y 
+                el respeto por los procesos artesanales.
+            </p>
+            <p>
+                Para nosotros, el barro es más que materia prima: es un vínculo entre el pasado, el presente 
+                y el futuro.
+            </p>
+        </div>
+    </div>
+
+    <div class="bloque">
+        <img src="https://www.tesorozapoteco.com/wp-content/uploads/2021/07/IMG_6591.jpg" alt="Artesanías terminadas">
+        <div class="texto">
+            <h2>Compromiso</h2>
+            <p>
+                Estamos comprometidos con el desarrollo de la comunidad artesanal, promoviendo el comercio 
+                justo y valorando el trabajo de cada artesano.
+            </p>
+            <p>
+                Buscamos reducir el impacto ambiental mediante el uso responsable de recursos naturales 
+                y procesos sostenibles. Cada pieza es elaborada con respeto tanto por la naturaleza como 
+                por la cultura que representa.
+            </p>
+            <p>
+                Nuestro propósito es llevar el arte del barro a más hogares, manteniendo viva una tradición 
+                que merece ser reconocida y preservada.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Tradiciones - Artesanías de Barro
+</footer>
+
+</body>
+</html>

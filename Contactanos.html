@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto - Taller de Artesanías</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4efe6;
+    color: #333;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    background: #f4efe6;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+nav a {
+    color: #2f6f4f;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #8b7d6b;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 20px 50px;
+}
+
+/* TITULO */
+h1 {
+    text-align: center;
+    color: #2f6f4f;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* INFORMACIÓN */
+.info {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.info h2 {
+    color: #2f6f4f;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
+/* MAPA */
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* FORMULARIO */
+.form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form h2 {
+    color: #2f6f4f;
+    margin-bottom: 20px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.form button {
+    background: #2f6f4f;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: #8b7d6b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="Tradiciones.html">Inicio</a>
+    <a href="Historia tradiciones.html">Historia</a>
+    <a href="Taller.html">Taller</a>
+    <a href="Galería.html">Galería</a>
+    <a href="Contactanos.html">Contacto</a>
+</nav>
+
+<div class="container">
+    <h1>Contáctanos</h1>
+
+    <div class="contact-grid">
+
+        <!-- INFORMACIÓN -->
+        <div class="info">
+            <h2>Información del taller</h2>
+            <p><strong>Nombre:</strong> Taller de Artesanías Tradiciones</p>
+            <p><strong>Teléfono:</strong> 951 322 55 07</p>
+            <p><strong>Email:</strong> contacto@tradiciones.com</p>
+
+            <h2>Dirección</h2>
+            <p>
+                Calle I. Aldama 101,<br>
+                2da Secc Sta Maria Atzompa,<br>
+                71220 Santa María Atzompa, Oax.
+            </p>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.33324054528!2d-96.777512725072!3d17.105236683734617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c71fc8a6f1f285%3A0x4ea38c6046f43871!2sTradiciones%20Taller%20Artesanal!5e0!3m2!1ses-419!2smx!4v1777857542580!5m2!1ses-419!2smx"
+                allowfullscreen=""
+                loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="form">
+            <h2>Envíanos un mensaje</h2>
+
+            <form>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="tel" placeholder="Teléfono">
+                <input type="text" placeholder="Asunto">
+
+                <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

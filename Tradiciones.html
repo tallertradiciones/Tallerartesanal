@@ -1,0 +1,46 @@
+<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Taller Artesanal</title> <style> body { margin: 0; font-family: 'Poppins', sans-serif; background: #f4efe6; /* HUESO */ color: #333; } /* NAV */ nav { position: fixed; width: 100%; background: #f4efe6; display: flex; justify-content: center; border-bottom: 1px solid #ddd; z-index: 1000; } nav a { color: #2f6f4f; padding: 20px; text-decoration: none; font-weight: 500; } nav a:hover { color: #8b7d6b; } /* HERO */ .hero { height: 100vh; background: url('https://via.placeholder.com/1400x800') center/cover no-repeat; /* CAMBIAR */ display: flex; align-items: center; justify-content: center; text-align: center; color: white; } .hero h1 { font-size: 60px; } .hero p { font-size: 20px; } /* SECCIONES */ section { padding: 80px 20px; text-align: center; } .titulo { font-size: 35px; color: #2f6f4f; } /* HISTORIA */ .historia { max-width: 800px; margin: auto; } /* TALLER */ .taller { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } .taller img { width: 400px; border-radius: 15px; margin: 20px; } .taller div { max-width: 400px; } .producto img { width: 100%; max-width: 300px; /* controla el tamaño real */ border-radius: 15px; } /* GALERÍA */ .galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; } .galeria img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; } /* BOTÓN */ .btn { background: #2f6f4f; color: #f4efe6; padding: 15px 30px; border-radius: 30px; text-decoration: none; } .btn { background: #2f6f4f; color: #f4efe6; padding: 15px 30px; border-radius: 30px; text-decoration: none; display: inline-block; margin-top: 15px; transition: 0.3s; } .btn:hover { background: #25573d; transform: scale(1.05); } /* CONTACTO */ .contacto { background: #e8e1d5; color: #333; } /* FOOTER */ footer { background: #dcd3c5; color: #333; padding: 20px; text-align: center; } </style> </head> <body> <nav> <a href="Tradiciones.html">Inicio</a> <a href="Historia tradiciones.html">Historia</a> <a href="Taller.html">Taller</a> <a href="Galería.html">Galería</a> <a href="Contactanos.html">Contacto</a> </nav> <div class="hero" style="background-image: url('https://tiendaq1pull.b-cdn.net/content/img-o-1767-tradiciones-taller-artesanal.jpg');"> <div class="overlay"> <h1>Taller Tradiciones</h1> <p>Donde la cultura se transforma en creación</p> </div> </div> <!-- HISTORIA --> <section id="historia">
+    <h2 class="titulo">Nuestra Historia</h2>
+
+    <div class="historia">
+        <p>
+            Las artesanías de Atzompa nacen en la cultura zapoteca,
+            donde el barro era parte esencial de la vida diaria.
+        </p>
+
+        <p>
+            Hoy, el taller Tradiciones conserva esta herencia,
+            creando piezas sin plomo que cuidan la salud y la tradición.
+        </p>
+
+
+        <!-- BOTÓN -->
+        <a href="Historia tradiciones.html" class="btn">Ver más</a>
+    </div>
+</section> <!-- TALLER --> <section id="taller"> <h2 class="titulo">El Taller</h2> <div class="producto"> <img src="https://revistaquixe.com/wp-content/uploads/2022/08/DSC04549-2.jpg"> <p class="precio">$450 MXN</p> </div> <div> <p> Elaboramos piezas únicas utilizando técnicas tradicionales. Cada producto es hecho a mano con materiales locales. </p> <a href="Taller.html" class="btn" target="_blank"> Ver más </a> </div> </div> </section> <!-- GALERÍA --> <section id="galeria">
+    <h2 class="titulo">Galería</h2>
+
+    <div class="galeria">
+
+        <a href="galeria1.html">
+            <img src="https://i.pinimg.com/originals/31/af/21/31af21c3f09a9fd35ab353e2ed5100dc.jpg">
+        </a>
+
+        <a href="galeria2.html">
+            <img src="https://teterete.com/mx/wp-content/uploads/2021/10/ceramica-de-oaxaca-600x450.jpeg">
+        </a>
+
+        <a href="galeria3.html">
+            <img src="https://teterete.com/mx/wp-content/uploads/2023/04/vajilla-de-oaxaca.jpeg">
+        </a>
+
+        <a href="galeria4.html">
+            <img src="https://teterete.com/mx/wp-content/uploads/2024/07/mezcalero-barro-atzompa.jpg">
+        </a>
+
+    </div>
+
+    <!-- BOTÓN -->
+    <div style="margin-top:20px;">
+        <a href="Galería.html" class="btn">Ver más</a>
+    </div>
+</section> <!-- CONTACTO --> <section id="contacto" class="contacto"> <h2>Contacto</h2> <p>Email: selsoenriquez63@gmail.com</p> <p>Tel: 951 3225507</p> <p>Instagram: Tradiciones.gm</p> <p>Facebook: Tradiciones.taller.rm</p> </section> <section class="formulario"> <h2>Contáctanos</h2> <p>Envíanos un mensaje o solicita información sobre nuestros talleres</p> <form> <div class="fila"> <input type="text" placeholder="Nombre completo" required> <input type="email" placeholder="Correo electrónico" required> </div> <div class="fila"> <input type="tel" placeholder="Teléfono"> <input type="text" placeholder="Asunto"> </div> <textarea placeholder="Escribe tu mensaje aquí..." rows="8" required></textarea> <button type="submit">Enviar mensaje</button> </form> </section> <footer> <p>&copy; 2026 Taller Artesanal Oaxaca</p> </footer> </body> </html>            

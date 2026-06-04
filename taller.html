@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tradiciones</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4efe6;
+    color: #333;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    background: #f4efe6;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+nav a {
+    color: #2f6f4f;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #8b7d6b;
+}
+
+/* CONTENIDO */
+.container {
+    padding: 100px 20px 20px;
+}
+
+/* 🔥 TÍTULO MEJORADO */
+.titulo {
+    text-align: center;
+    font-size: 42px;
+    color: #2f6f4f;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.titulo span {
+    color: #8b7d6b;
+    font-weight: 300;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #8b7d6b;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+/* PRODUCTOS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #2f6f4f;
+}
+
+/* BOTÓN */
+button {
+    background: #2f6f4f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e4d36;
+}
+
+/* CARRITO */
+.cart {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 300px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 15px;
+    cursor: move;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* FORM */
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="Tradiciones.html">Inicio</a>
+<a href="Historia tradiciones.html">Historia</a>
+<a href="taller.html">Taller</a>
+<a href="Galería.html">Galería</a>
+<a href="Contactanos.html">Contacto</a>
+<a href="#productos">Productos</a>
+<a href="#pago">Pago</a>
+</nav>
+
+<div class="container" id="productos">
+
+<h1 class="titulo">Tradi<span>ciones</span></h1>
+<p class="subtitulo">Artesanías</p>
+
+<div class="products" id="productList"></div>
+</div>
+
+<div class="cart" id="cartBox">
+<h2>Carrito</h2>
+<div id="cartItems"></div>
+<p class="total">Total: $<span id="total">0</span></p>
+
+<div id="pago">
+<h3>Pago</h3>
+<input type="text" id="nombre" placeholder="Nombre en tarjeta">
+<input type="number" id="tarjeta" placeholder="Número de tarjeta">
+<select id="banco">
+<option value="">Selecciona banco</option>
+<option>BBVA</option>
+<option>Santander</option>
+<option>Banorte</option>
+</select>
+
+<button onclick="pagar()">Pagar</button>
+</div>
+</div>
+
+<script>
+const products=[
+{name:"Platos decorativos",price:320,img:"https://teterete.com/mx/wp-content/uploads/2023/04/vajilla-de-oaxaca.jpeg"},
+{name:"Vasija tradicional",price:450,img:"https://revistaquixe.com/wp-content/uploads/2022/08/DSC04549-2.jpg"},
+{name:"Taza ahumada",price:150,img:"http://www.talaverasalazar.com/cdn/shop/files/6YUTFGTUYG_1200x1200.png?v=1739464783"},
+{name:"Mezcalero artesanal",price:180,img:"https://teterete.com/mx/wp-content/uploads/2024/07/mezcalero-barro-atzompa.jpg"},
+{name:"Molcajete",price:400,img:"http://www.guelaguetzadesigns.com/cdn/shop/files/1_255b0b7c-c036-45b5-bcab-a0f4e356e9be_1024x1024.png?v=1710185481"}
+];
+
+let cart=[];
+
+function renderProducts(){
+const list=document.getElementById('productList');
+list.innerHTML="";
+
+products.forEach((p,i)=>{
+list.innerHTML+=`
+<div class="card">
+<img src="${p.img}">
+<h3>${p.name}</h3>
+<p>$${p.price}</p>
+<button onclick="addToCart(${i})">Agregar</button>
+</div>`;
+});
+}
+
+function addToCart(index){
+cart.push(products[index]);
+renderCart();
+}
+
+function removeItem(i){
+cart.splice(i,1);
+renderCart();
+}
+
+function renderCart(){
+const items=document.getElementById('cartItems');
+items.innerHTML="";
+let total=0;
+
+cart.forEach((item,i)=>{
+ total+=item.price;
+ items.innerHTML+=`
+ <div class="item">
+ ${item.name} - $${item.price}
+ <button onclick="removeItem(${i})">🗑️</button>
+ </div>`;
+});
+
+document.getElementById('total').textContent=total;
+}
+
+function pagar(){
+const nombre=document.getElementById('nombre').value;
+const tarjeta=document.getElementById('tarjeta').value;
+const banco=document.getElementById('banco').value;
+
+if(nombre==="" || tarjeta.length<12 || banco===""){
+alert("Completa correctamente los datos");
+return;
+}
+
+alert("Pago realizado con éxito 🎉");
+cart=[];
+renderCart();
+}
+
+/* carrito arrastrable */
+const cartBox=document.getElementById("cartBox");
+let offsetX=0, offsetY=0, isDown=false;
+
+cartBox.addEventListener("mousedown",(e)=>{
+isDown=true;
+offsetX=e.clientX-cartBox.offsetLeft;
+offsetY=e.clientY-cartBox.offsetTop;
+});
+
+document.addEventListener("mouseup",()=>isDown=false);
+
+document.addEventListener("mousemove",(e)=>{
+if(!isDown) return;
+cartBox.style.left=(e.clientX-offsetX)+"px";
+cartBox.style.top=(e.clientY-offsetY)+"px";
+});
+
+renderProducts();
+</script>
+
+</body>
+</html>
