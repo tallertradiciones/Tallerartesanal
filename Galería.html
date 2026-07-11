@@ -2,82 +2,160 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Galería de Barro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería - Tradiciones</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f4efe6;
-    color: #333;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* NAV */
-nav {
-    position: fixed;
-    width: 100%;
-    background: #f4efe6;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #ddd;
-    z-index: 1000;
+body{
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:#fff;
 }
 
-nav a {
-    color: #2f6f4f;
-    padding: 20px;
-    text-decoration: none;
-    font-weight: 500;
+/* MENÚ */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:18px;
+    background:rgba(0,0,0,.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
-nav a:hover {
-    color: #1e4d36;
+nav a{
+    color:#f5d58b;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
-/* CONTENIDO */
-.contenedor {
-    padding-top: 100px;
-    width: 90%;
-    margin: auto;
-    text-align: center;
+nav a:hover{
+    color:#ffffff;
 }
 
-h1 {
-    color: #2f6f4f;
+/* PORTADA */
+
+header{
+    height:55vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://www.oaxaca-mio.com/tours/imagenesoax/atzompa/8.jpg')
+    center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+header h1{
+    font-size:70px;
+    letter-spacing:6px;
+}
+
+header p{
+    margin-top:15px;
+    color:#f5d58b;
+    font-size:22px;
+}
+
+.linea{
+    width:80px;
+    height:4px;
+    background:#f5d58b;
+    margin:20px auto;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 0;
 }
 
 /* GALERÍA */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
 }
 
-.producto {
-    background: #fff;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+.producto{
+    background:#1a1a1a;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(255,200,80,.25);
+    transition:.35s;
 }
 
-.producto:hover {
-    transform: scale(1.05);
+.producto:hover{
+    transform:translateY(-8px);
 }
 
-.producto img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+.producto img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
 }
 
-.producto p {
-    margin-top: 10px;
-    font-size: 14px;
-    line-height: 1.5;
-    text-align: justify;
+.info{
+    padding:30px;
+}
+
+.info h3{
+    color:#f5d58b;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.info p{
+    color:#ddd;
+    line-height:1.8;
+    text-align:justify;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#1a1a1a;
+    color:#bbb;
+    border-top:1px solid #333;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header h1{
+font-size:45px;
+}
+
+header p{
+font-size:18px;
+}
+
+nav{
+gap:18px;
+flex-wrap:wrap;
+}
+
 }
 
 </style>
@@ -86,55 +164,133 @@ h1 {
 <body>
 
 <nav>
-    <a href="index.html">Inicio</a>
-    <a href="Historia tradiciones.html">Historia</a>
-    <a href="taller.html">Taller</a>
-    <a href="Galería.html">Galería</a>
-    <a href="Contactanos.html">Contacto</a>
+
+<a href="Tradiciones.html">Inicio</a>
+<a href="Historia tradiciones.html">Historia</a>
+<a href="Taller.html">Taller</a>
+<a href="Galería.html">Galería</a>
+<a href="Contactanos.html">Contacto</a>
+
 </nav>
 
-<div class="contenedor">
-    <h1>Productos de Barro</h1>
+<header>
 
-    <div class="galeria">
+<div>
 
-        <div class="producto">
-            <img src="https://www.oaxaca-mio.com/tours/imagenesoax/atzompa/8.jpg" alt="">
-            <p>
-                Maceta artesanal elaborada a mano con técnicas tradicionales. Su acabado rústico y textura natural la convierten en una pieza ideal para resaltar la belleza de tus plantas y aportar un toque cálido y auténtico a cualquier espacio.
-            </p>
-        </div>
+<h1>GALERÍA</h1>
 
-        <div class="producto">
-            <img src="https://monumental.mexicodesconocido.com.mx/wp-content/uploads/formidable/3/Maestra-Rufina-Ruiz-scaled.jpeg" alt="">
-            <p>
-                Jarra de barro hecha cuidadosamente por artesanos, diseñada para conservar la frescura de las bebidas. Su estilo tradicional y su forma elegante la hacen perfecta tanto para uso diario como para decoración.
-            </p>
-        </div>
+<div class="linea"></div>
 
-        <div class="producto">
-            <img src="https://2.bp.blogspot.com/-Sn5D9038viE/XuPD9tL-EDI/AAAAAAAAIdE/i6L4lU2KjlUW1_L32JWw51zGxV6Hi4vMQCLcBGAsYHQ/s1600/santa%2Bmaria%2Batzompa%2Bturismo-10.jpg" alt="">
-            <p>
-                Plato decorativo con detalles únicos y acabado artesanal. Cada pieza presenta ligeras variaciones que reflejan el trabajo manual, convirtiéndolo en un elemento decorativo lleno de carácter y tradición.
-            </p>
-        </div>
+<p>Conoce algunas de nuestras piezas elaboradas en barro.</p>
 
-        <div class="producto">
-            <img src="https://teterete.com/mx/wp-content/uploads/2024/07/set-mezcal.jpeg" alt="">
-            <p>
-                Taza de barro con diseño rústico y textura natural, ideal para disfrutar bebidas calientes. Su elaboración artesanal garantiza una pieza única que combina funcionalidad con tradición.
-            </p>
-        </div>
-
-        <div class="producto">
-            <img src="https://teterete.com/mx/wp-content/uploads/2021/10/maceta-de-atzompa.jpeg" alt="">
-            <p>
-                Figura decorativa hecha a mano, inspirada en formas tradicionales. Sus detalles y acabado reflejan la dedicación del artesano, convirtiéndola en una pieza especial para cualquier colección o espacio.
-            </p>
-        </div>
-
-    </div>
 </div>
+
+</header>
+
+<section class="contenedor">
+
+<div class="galeria">
+
+<div class="producto">
+
+<img src="https://www.oaxaca-mio.com/tours/imagenesoax/atzompa/8.jpg">
+
+<div class="info">
+
+<h3>Maceta Artesanal</h3>
+
+<p>
+Maceta artesanal elaborada a mano con técnicas tradicionales. Su acabado rústico y textura natural la convierten en una pieza ideal para resaltar la belleza de tus plantas y aportar un toque cálido y auténtico a cualquier espacio.
+</p>
+
+</div>
+
+</div>
+
+<div class="producto">
+
+<img src="https://monumental.mexicodesconocido.com.mx/wp-content/uploads/formidable/3/Maestra-Rufina-Ruiz-scaled.jpeg">
+
+<div class="info">
+
+<h3>Jarra Tradicional</h3>
+
+<p>
+Jarra de barro hecha cuidadosamente por artesanos, diseñada para conservar la frescura de las bebidas. Su estilo tradicional y su forma elegante la hacen perfecta tanto para uso diario como para decoración.
+</p>
+
+</div>
+
+</div>
+<div class="producto">
+
+<img src="https://2.bp.blogspot.com/-Sn5D9038viE/XuPD9tL-EDI/AAAAAAAAIdE/i6L4lU2KjlUW1_L32JWw51zGxV6Hi4vMQCLcBGAsYHQ/s1600/santa%2Bmaria%2Batzompa%2Bturismo-10.jpg" alt="Plato decorativo">
+
+<div class="info">
+
+<h3>Plato Decorativo</h3>
+
+<p>
+Plato decorativo con detalles únicos y acabado artesanal. Cada pieza presenta ligeras variaciones que reflejan el trabajo manual, convirtiéndolo en un elemento decorativo lleno de carácter y tradición.
+</p>
+
+</div>
+
+</div>
+
+<div class="producto">
+
+<img src="https://teterete.com/mx/wp-content/uploads/2024/07/set-mezcal.jpeg" alt="Taza de barro">
+
+<div class="info">
+
+<h3>Taza de Barro</h3>
+
+<p>
+Taza de barro con diseño rústico y textura natural, ideal para disfrutar bebidas calientes. Su elaboración artesanal garantiza una pieza única que combina funcionalidad con tradición.
+</p>
+
+</div>
+
+</div>
+
+<div class="producto">
+
+<img src="https://teterete.com/mx/wp-content/uploads/2021/10/maceta-de-atzompa.jpeg" alt="Figura decorativa">
+
+<div class="info">
+
+<h3>Figura Decorativa</h3>
+
+<p>
+Figura decorativa hecha a mano, inspirada en formas tradicionales. Sus detalles y acabado reflejan la dedicación del artesano, convirtiéndola en una pieza especial para cualquier colección o espacio.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3 style="color:#f5d58b; margin-bottom:10px;">
+Tradiciones
+</h3>
+
+<p>
+Cada pieza de barro representa el legado de los artesanos de Santa María Atzompa, Oaxaca, preservando técnicas ancestrales que han pasado de generación en generación.
+</p>
+
+<br>
+
+<p style="color:#999;">
+© 2026 Tradiciones | Todos los derechos reservados.
+</p>
+
+</footer>
 
 </body>
 </html>
