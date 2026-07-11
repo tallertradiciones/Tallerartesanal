@@ -1,17 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Productos - Tradiciones</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
 
 body{
     font-family:Arial,sans-serif;
@@ -19,19 +22,22 @@ body{
     color:#fff;
 }
 
+
 /* NAV */
+
 nav{
     position:fixed;
     top:0;
     width:100%;
     display:flex;
     justify-content:center;
-    gap:40px;
+    gap:35px;
     padding:18px;
     background:rgba(0,0,0,.6);
     backdrop-filter:blur(10px);
     z-index:10;
 }
+
 
 nav a{
     color:#f5d58b;
@@ -39,107 +45,196 @@ nav a{
     font-weight:bold;
 }
 
+
 nav a:hover{
     color:#2f6f4f;
 }
 
+
+
+
 /* HERO */
+
 .hero{
+
     height:55vh;
     background:url('imagenes/fondo.jpg') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
     position:relative;
+
 }
 
+
 .hero:before{
+
     content:'';
     position:absolute;
     inset:0;
     background:rgba(0,0,0,.6);
+
 }
+
 
 .hero .contenido{
+
     position:relative;
     text-align:center;
+
 }
+
 
 .hero h1{
+
     font-size:65px;
     letter-spacing:8px;
+
 }
+
 
 .hero h2{
+
     color:#e2c06d;
     margin-top:15px;
+
 }
+
 
 .hero p{
+
     margin-top:15px;
     font-size:20px;
+
 }
+
+
+
+
 
 /* PRODUCTOS */
+
 main{
+
     padding:70px 8%;
+
 }
 
+
+
 .titulo{
+
     text-align:center;
     color:#f5d58b;
     font-size:45px;
     margin-bottom:50px;
+
 }
 
+
+
+.titulo::after{
+
+    content:'';
+    display:block;
+    width:120px;
+    height:3px;
+    background:#2f6f4f;
+    margin:20px auto;
+
+}
+
+
+
 .productos{
+
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:35px;
+
 }
 
+
+
+
 .card{
+
     background:#1a1a1a;
     border-radius:24px;
     overflow:hidden;
     box-shadow:0 0 20px rgba(255,200,80,.4);
     transition:.3s;
+
 }
+
+
 
 .card:hover{
+
     transform:translateY(-8px);
+
 }
+
+
+
+
+/* IMAGENES MISMO TAMAÑO */
 
 .card img{
+
     width:100%;
-    height:300px;
+    height:320px;
     object-fit:cover;
+    display:block;
+
 }
+
+
+
+
 
 .info{
+
     padding:30px;
     text-align:center;
+
 }
 
+
+
 .info h3{
+
     font-size:30px;
     color:#f5d58b;
     margin-bottom:15px;
+
 }
+
+
 
 .info p{
+
     color:#ddd;
     line-height:1.6;
+
 }
 
+
+
 .precio{
+
     color:#e2c06d;
     font-size:22px;
     font-weight:bold;
     margin:15px 0;
+
 }
 
+
+
+
 .btn{
+
     display:inline-block;
     margin-top:15px;
     padding:12px 25px;
@@ -147,133 +242,328 @@ main{
     color:white;
     text-decoration:none;
     border-radius:12px;
+
 }
+
+
 
 .btn:hover{
+
     background:#3d8b63;
+
 }
+
+
+
+
+
+/* ESPACIO ENTRE SECCIONES */
+
+section[id]{
+
+    margin-bottom:120px;
+
+}
+
+
+
+section[id] .titulo{
+
+    margin-top:40px;
+    margin-bottom:50px;
+
+}
+
+
+
+
 
 /* RESPONSIVE */
+
 @media(max-width:800px){
 
+
 .hero h1{
+
     font-size:42px;
+
 }
+
 
 nav{
+
     gap:15px;
     flex-wrap:wrap;
-}
 
 }
+
+
+}
+
 </style>
 
 </head>
 
+
 <body>
 
+
 <nav>
+
 <a href="index.html">Inicio</a>
 <a href="Historia tradiciones.html">Historia</a>
 <a href="Taller.html">Taller</a>
 <a href="Galería.html">Galería</a>
 <a href="Contactanos.html">Contacto</a>
 <a href="productos.html">Productos</a>
+<a href="#ahumado">Ahumado</a>
+<a href="#vidreado">Vidreado</a>
+<a href="#natural">Natural</a>
+
 </nav>
+
 
 
 <section class="hero">
 
+
 <div class="contenido">
+
 <h1>PRODUCTOS</h1>
+
 <h2>Artesanías de Oaxaca</h2>
+
 <p>Piezas únicas creadas con técnicas tradicionales de barro negro.</p>
+
 </div>
 
-</section>
 
+</section>
 
 <main>
 
 <h2 class="titulo">Colección Tradiciones</h2>
 
 
+
+<!-- =========================
+     SECCIÓN AHUMADO
+========================= -->
+
+<section id="ahumado">
+
+<h2 class="titulo">Sección Ahumado</h2>
+
+
 <div class="productos">
 
 
 <div class="card">
-<img src="https://teterete.com/mx/wp-content/uploads/2023/04/vajilla-de-oaxaca.jpeg" alt="Platos decorativos">
+
+<img src="http://www.talaverasalazar.com/cdn/shop/files/6YUTFGTUYG_1200x1200.png?v=1739464783" 
+alt="Taza ahumada">
+
 
 <div class="info">
-<h3>Platos decorativos</h3>
-<p>Piezas artesanales elaboradas con diseños tradicionales oaxaqueños.</p>
-<p class="precio">$320 MXN</p>
-<a class="btn" href="#">Ver detalle</a>
-</div>
 
-</div>
-
-
-
-<div class="card">
-<img src="https://revistaquixe.com/wp-content/uploads/2022/08/DSC04549-2.jpg" alt="Vasija tradicional">
-
-<div class="info">
-<h3>Vasija tradicional</h3>
-<p>Creada mediante técnicas heredadas por generaciones de artesanos.</p>
-<p class="precio">$450 MXN</p>
-<a class="btn" href="#">Ver detalle</a>
-</div>
-
-</div>
-
-
-
-<div class="card">
-<img src="http://www.talaverasalazar.com/cdn/shop/files/6YUTFGTUYG_1200x1200.png?v=1739464783" alt="Taza ahumada">
-
-<div class="info">
 <h3>Taza ahumada</h3>
-<p>El proceso de ahumado le da su color oscuro y acabado especial.</p>
+
+<p>
+El proceso de ahumado le da su característico color oscuro 
+y un acabado especial que representa la tradición artesanal.
+</p>
+
 <p class="precio">$150 MXN</p>
+
 <a class="btn" href="#">Ver detalle</a>
+
 </div>
 
 </div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+     SECCIÓN VIDREADO
+========================= -->
+
+<section id="vidreado">
+
+
+<h2 class="titulo">Sección Vidreado</h2>
+
+
+<div class="productos">
 
 
 
 <div class="card">
-<img src="https://teterete.com/mx/wp-content/uploads/2024/07/mezcalero-barro-atzompa.jpg" alt="Mezcalero artesanal">
+
+<img src="https://teterete.com/mx/wp-content/uploads/2023/04/vajilla-de-oaxaca.jpeg" 
+alt="Platos decorativos">
+
 
 <div class="info">
-<h3>Mezcalero artesanal</h3>
-<p>Una pieza tradicional para conservar y disfrutar el mezcal.</p>
-<p class="precio">$180 MXN</p>
+
+<h3>Platos decorativos</h3>
+
+<p>
+Piezas artesanales con diseños tradicionales oaxaqueños 
+y acabados brillantes que resaltan sus detalles.
+</p>
+
+<p class="precio">$320 MXN</p>
+
 <a class="btn" href="#">Ver detalle</a>
+
 </div>
 
 </div>
+
 
 
 
 <div class="card">
-<img src="http://www.guelaguetzadesigns.com/cdn/shop/files/1_255b0b7c-c036-45b5-bcab-a0f4e356e9be_1024x1024.png?v=1710185481" alt="Molcajete">
+
+<img src="http://www.guelaguetzadesigns.com/cdn/shop/files/1_255b0b7c-c036-45b5-bcab-a0f4e356e9be_1024x1024.png?v=1710185481" 
+alt="Molcajete artesanal">
+
 
 <div class="info">
-<h3>Molcajete</h3>
-<p>Utensilio artesanal hecho con técnicas tradicionales mexicanas.</p>
+
+<h3>Molcajete artesanal</h3>
+
+<p>
+Utensilio mexicano elaborado con técnicas tradicionales 
+y un acabado resistente para uso cotidiano.
+</p>
+
 <p class="precio">$400 MXN</p>
+
 <a class="btn" href="#">Ver detalle</a>
+
 </div>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+     SECCIÓN NATURAL
+========================= -->
+
+
+<section id="natural">
+
+
+<h2 class="titulo">Sección Natural</h2>
+
+
+<div class="productos">
+
+
+
+
+
+<div class="card">
+
+
+<img src="https://revistaquixe.com/wp-content/uploads/2022/08/DSC04549-2.jpg" 
+alt="Vasija tradicional">
+
+
+<div class="info">
+
+
+<h3>Vasija tradicional</h3>
+
+
+<p>
+Creada mediante técnicas heredadas por generaciones 
+de artesanos oaxaqueños.
+</p>
+
+
+<p class="precio">$450 MXN</p>
+
+
+<a class="btn" href="#">Ver detalle</a>
+
 
 </div>
 
 
 </div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<img src="https://teterete.com/mx/wp-content/uploads/2024/07/mezcalero-barro-atzompa.jpg" 
+alt="Mezcalero artesanal">
+
+
+<div class="info">
+
+
+<h3>Mezcalero artesanal</h3>
+
+
+<p>
+Pieza tradicional elaborada para conservar 
+y disfrutar el mezcal oaxaqueño.
+</p>
+
+
+<p class="precio">$180 MXN</p>
+
+
+<a class="btn" href="#">Ver detalle</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
 
 </main>
 
 
+
 </body>
+
 </html>
