@@ -10,10 +10,24 @@ body{font-family:Arial,sans-serif;background:#111;color:#fff}
 nav{position:fixed;top:0;width:100%;display:flex;justify-content:center;gap:40px;
 padding:18px;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);z-index:10}
 nav a{color:#f5d58b;text-decoration:none;font-weight:bold}
-.hero{height:100vh;background:url('imagenes/fondo.jpg') center/cover no-repeat;
-display:flex;align-items:center;justify-content:center;position:relative}
+.hero{
+height:100vh;
+background:url('imagenes/fondo.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+animation:zoomFondo 3s ease;
+overflow:hidden;
+}
 .hero:before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.55)}
-.hero .c{position:relative;text-align:center;padding:20px}
+.hero .c{
+position:relative;
+text-align:center;
+padding:20px;
+animation:aparecer 1.8s ease;
+z-index:2;
+}
 .hero h1{font-size:72px;letter-spacing:8px}
 .hero h2{color:#e2c06d;margin:15px 0}
 .hero p{max-width:700px;margin:auto;font-size:20px}
@@ -33,6 +47,34 @@ text-decoration:none;border-radius:12px}
 @media(max-width:800px){
 .hero h1{font-size:48px}
 .section-card{grid-template-columns:1fr}
+}
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes zoomFondo{
+from{
+transform:scale(1.08);
+}
+to{
+transform:scale(1);
+}
+}
+
+.btn{
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 30px #e2c06d;
 }
 </style>
 </head>
